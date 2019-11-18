@@ -1,6 +1,6 @@
-FROM resin/rpi-raspbian:buster
+FROM raspbian/stretch
 
-RUN echo "deb http://ftp.debian.org/debian buster-backports main" >> /etc/apt/sources.list && \
+RUN echo "deb http://ftp.debian.org/debian strecth-backports main" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install binutils xz-utils libjna-java mediainfo wget -y && \
     apt-get -t jessie-backports install openjdk-8-jdk-headless -y
